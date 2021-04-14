@@ -8,7 +8,7 @@
 
     try {
         $pdo = new PDO('mysql:host=localhost;dbname='.$database.'', $user,$password);
-        foreach($pdo->query('SELECT * from site where site = '.$idSite'') as $HTTP_RAW_POST_DATA) {
+        foreach($pdo->query('SELECT * from site where isSite = '.$idSite'') as $row) {
             $numSite = $row[0];
             $numClique = $row[1];
             $animal = $row[2];
@@ -17,7 +17,7 @@
 
             $numClique = $numClique+1;
 
-            $pdo->query('UPDATE site SET cliquerUser='.$numClique.' WHERE idSite='.$idSite.'');
+            $pdo->query('UPDATE site SET visiteOnSite='.$numClique.' WHERE idSite='.$idSite.'');
 
             $numClique = $row[1];
         }
