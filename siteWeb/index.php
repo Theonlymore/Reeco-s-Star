@@ -2,24 +2,22 @@
     $idSite = 1;
     $user ='webAccess';
     $password = 'password';
-    $database = 'lesSites'
+    $database = 'lesSites';
     $port = 5353;
-    $table 'webSite'
+    $table = 'webSite';
 
     try {
         $pdo = new PDO('mysql:host=localhost;dbname='.$database.'', $user,$password);
-        foreach($pdo->query('SELECT * from site where isSite = '.$idSite'') as $row) {
+        foreach($pdo->query('SELECT * from '.$table.' where idSite ='.$idSite.'') as $row) {
             $numSite = $row[0];
-            $numClique = $row[1];
+            $visiteOnSite = $row[1];
             $animal = $row[2];
 
-            echo $numClique."<br/>";
+            $visiteOnSite = $visiteOnSite+1;
 
-            $numClique = $numClique+1;
+            $pdo->query('UPDATE '.$table.' SET visiteOnSite='.$visiteOnSite.' WHERE idSite='.$idSite.'');
 
-            $pdo->query('UPDATE site SET visiteOnSite='.$numClique.' WHERE idSite='.$idSite.'');
-
-            $numClique = $row[1];
+            $visiteOnSite = $row[1];
         }
     } catch (PDOException $e){
         print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -43,7 +41,11 @@
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
+    <a>site numéro : <?php echo $numSite ?></a> <br/>
+    <a>Nombre de visite : <?php echo $visiteOnSite ?></a><br/>
+    <a>Animal pref : <?php echo $animal ?></a><br/>
+
+
 </body>
 </html>
 
