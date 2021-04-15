@@ -2,13 +2,13 @@
 
 user="$1"
 pass="$2"
-rowPath="/home/alex/"
+rowPath="/var/www/public/"
 path="$rowPath$user"
 
 
 echo "$path"
-chown -R alex "$rowPath"
 mkdir -p "$path"
 
 
-ftpasswd --stdin --file=/etc/proftpd/vpasswd --name="${user}" --home="${path}" --shell=/bin/false --uid=1001 --gid=1001 --passwd <<< "$pass"
+ftpasswd --stdin --file=/etc/proftpd/vpasswd --name="${user}" --home="${path}" --shell=/bin/false --uid=1002 --gid=1002 --passwd <<< "$pass"
+chown -R public "$rowPath"
