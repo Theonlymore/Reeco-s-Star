@@ -21,7 +21,7 @@ echo "Listen ${port} " >> $pathApachePortConf
 
 echo "<VirtualHost *:${port}>" >> $pathApacheDefault
 echo "ServerAdmin webmaster@localhost">> $pathApacheDefault
-echo "DocumentRoot ${rowPath}${user}">> $pathApacheDefault
+echo "DocumentRoot ${path}">> $pathApacheDefault
 echo "ErrorLog ""$""{""APACHE_LOG_DIR""}""/""error.log" >> $pathApacheDefault
 echo "CustomLog ""$""{""APACHE_LOG_DIR""}""/""access.log combined">> $pathApacheDefault
 echo "</VirtualHost>" >> $pathApacheDefault
