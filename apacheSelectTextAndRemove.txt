@@ -1,0 +1,5 @@
+
+path = /root/Script/text
+port = 
+
+grep -n "5555>" /root/Script/text | cut -f1 -d:
