@@ -6,8 +6,10 @@ user="$1"
 rowPath="/var/www/public/"
 path="$rowPath$user"
 
-pathApachePortConf="/root/Script/text"
-pathApacheDefault="/root/Script/text"
+pathApachePortConf="/etc/apache2/ports.conf"
+pathApacheDefault="/etc/apache2/sites-enabled/000-default.conf"
+
+
 
 echo "Listen ${port}" >> $pathApachePortConf
 
