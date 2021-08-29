@@ -24,7 +24,13 @@
         die();
     }
 
+echo crypt('alex');
+echo('<br/>');
+echo realpath('index.php');
+echo('<br/>');
+
 ?>
+
 
 <!doctype html>
 
@@ -41,9 +47,10 @@
 </head>
 
 <body>
-    <a>site numéro : <?php echo $numSite ?></a> <br/>
+    <a>site numÃ©ro : <?php echo $numSite ?></a> <br/>
     <a>Nombre de visite : <?php echo $visiteOnSite ?></a><br/>
     <a>Animal pref : <?php echo $animal ?></a><br/>
+	<h1><a href="/admin/pageConfig.php">Page config :)<a></h1>
 
 
 </body>
