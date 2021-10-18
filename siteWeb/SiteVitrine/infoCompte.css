@@ -1,0 +1,59 @@
+h1 {
+    margin: 10px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+#infoPersonnel{
+    margin: auto    ;
+    width: 80%;
+}
+/* partie info personnel  */
+#textInfoPersoTitle{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+/* fin partie info personnel */
+
+
+/* Partie enchere */
+#mesEncheres img{
+    max-width: 280px;
+    max-height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#articleEnchere{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+#articleEnchere div{
+    margin: 10px;
+    height: 265px;
+    width: 280px;
+    background-color: rgb(255, 180, 0);
+    padding: 10px;
+    border-radius: 15px;
+
+}
+#textMesEncheres {
+    display: block;
+    text-align: center;
+}
+#articleObjetEnchere{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+#EnchereTextStatue {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* fin partie enchere */
